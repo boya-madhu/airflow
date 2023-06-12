@@ -1,0 +1,9 @@
+[2023-06-10T02:18:45.859+0000] {task_command.py:410} INFO - Running <TaskInstance: second_dag.second_task scheduled__2023-05-03T00:00:00+00:00 [None]> on host 93a4f35889be
+[2023-06-10T02:18:48.178+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='madhu' AIRFLOW_CTX_DAG_ID='second_dag' AIRFLOW_CTX_TASK_ID='second_task' AIRFLOW_CTX_EXECUTION_DATE='2023-05-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-03T00:00:00+00:00'
+[2023-06-10T02:18:48.334+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-10T02:18:48.388+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "hello world i am madhu this is second task"']
+[2023-06-10T02:18:48.512+0000] {subprocess.py:86} INFO - Output:
+[2023-06-10T02:18:48.520+0000] {subprocess.py:93} INFO - hello world i am madhu this is second task
+[2023-06-10T02:18:48.528+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-06-10T02:18:49.295+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=second_dag, task_id=second_task, execution_date=20230503T000000, start_date=20230610T021843, end_date=20230610T021849

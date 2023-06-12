@@ -1,0 +1,18 @@
+[2023-06-10T14:13:17.940+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: bash_operator.print_hello scheduled__2023-05-20T00:00:00+00:00 [queued]>
+[2023-06-10T14:13:18.047+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: bash_operator.print_hello scheduled__2023-05-20T00:00:00+00:00 [queued]>
+[2023-06-10T14:13:18.048+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 6
+[2023-06-10T14:13:18.431+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): print_hello> on 2023-05-20 00:00:00+00:00
+[2023-06-10T14:13:18.456+0000] {standard_task_runner.py:57} INFO - Started process 30245 to run task
+[2023-06-10T14:13:18.540+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'bash_operator', 'print_hello', 'scheduled__2023-05-20T00:00:00+00:00', '--job-id', '1549', '--raw', '--subdir', 'DAGS_FOLDER/BashOperator.py', '--cfg-path', '/tmp/tmp4l5cqoun']
+[2023-06-10T14:13:18.544+0000] {standard_task_runner.py:85} INFO - Job 1549: Subtask print_hello
+[2023-06-10T14:13:18.735+0000] {task_command.py:410} INFO - Running <TaskInstance: bash_operator.print_hello scheduled__2023-05-20T00:00:00+00:00 [running]> on host 93a4f35889be
+[2023-06-10T14:13:19.455+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='your_name' AIRFLOW_CTX_DAG_ID='bash_operator' AIRFLOW_CTX_TASK_ID='print_hello' AIRFLOW_CTX_EXECUTION_DATE='2023-05-20T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-20T00:00:00+00:00'
+[2023-06-10T14:13:19.456+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-06-10T14:13:19.457+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Hello, Airflow!"']
+[2023-06-10T14:13:19.564+0000] {subprocess.py:86} INFO - Output:
+[2023-06-10T14:13:19.568+0000] {subprocess.py:93} INFO - Hello, Airflow!
+[2023-06-10T14:13:19.568+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-06-10T14:13:19.661+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=bash_operator, task_id=print_hello, execution_date=20230520T000000, start_date=20230610T141317, end_date=20230610T141319
+[2023-06-10T14:13:19.713+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-10T14:13:19.816+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check

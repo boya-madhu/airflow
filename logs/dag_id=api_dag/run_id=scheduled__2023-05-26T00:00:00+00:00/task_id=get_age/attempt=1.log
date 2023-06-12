@@ -1,0 +1,13 @@
+[2023-06-10T11:41:12.895+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_dag.get_age scheduled__2023-05-26T00:00:00+00:00 [queued]>
+[2023-06-10T11:41:12.995+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_dag.get_age scheduled__2023-05-26T00:00:00+00:00 [queued]>
+[2023-06-10T11:41:12.998+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 6
+[2023-06-10T11:41:13.099+0000] {taskinstance.py:1327} INFO - Executing <Task(_PythonDecoratedOperator): get_age> on 2023-05-26 00:00:00+00:00
+[2023-06-10T11:41:13.133+0000] {standard_task_runner.py:57} INFO - Started process 19028 to run task
+[2023-06-10T11:41:13.206+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'api_dag', 'get_age', 'scheduled__2023-05-26T00:00:00+00:00', '--job-id', '1352', '--raw', '--subdir', 'DAGS_FOLDER/api_dag.py', '--cfg-path', '/tmp/tmptn0o_u8v']
+[2023-06-10T11:41:13.267+0000] {standard_task_runner.py:85} INFO - Job 1352: Subtask get_age
+[2023-06-10T11:41:14.248+0000] {task_command.py:410} INFO - Running <TaskInstance: api_dag.get_age scheduled__2023-05-26T00:00:00+00:00 [running]> on host 93a4f35889be
+[2023-06-10T11:41:15.498+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='madhu' AIRFLOW_CTX_DAG_ID='api_dag' AIRFLOW_CTX_TASK_ID='get_age' AIRFLOW_CTX_EXECUTION_DATE='2023-05-26T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-05-26T00:00:00+00:00'
+[2023-06-10T11:41:15.508+0000] {python.py:183} INFO - Done. Returned value was: 20
+[2023-06-10T11:41:15.761+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=api_dag, task_id=get_age, execution_date=20230526T000000, start_date=20230610T114112, end_date=20230610T114115
+[2023-06-10T11:41:15.899+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2023-06-10T11:41:16.272+0000] {taskinstance.py:2651} INFO - 1 downstream tasks scheduled from follow-on schedule check

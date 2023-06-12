@@ -1,0 +1,13 @@
+[2023-06-11T10:27:10.106+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: BashOperator_dag.first_task scheduled__2023-05-23T00:00:00+00:00 [queued]>
+[2023-06-11T10:27:12.111+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: BashOperator_dag.first_task scheduled__2023-05-23T00:00:00+00:00 [queued]>
+[2023-06-11T10:27:12.117+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 6
+[2023-06-11T10:27:18.278+0000] {taskinstance.py:1327} INFO - Executing <Task(BashOperator): first_task> on 2023-05-23 00:00:00+00:00
+[2023-06-11T10:27:18.357+0000] {standard_task_runner.py:57} INFO - Started process 52985 to run task
+[2023-06-11T10:27:18.491+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'BashOperator_dag', 'first_task', 'scheduled__2023-05-23T00:00:00+00:00', '--job-id', '1649', '--raw', '--subdir', 'DAGS_FOLDER/second_dag.py', '--cfg-path', '/tmp/tmppv02jzeq']
+[2023-06-11T10:27:18.688+0000] {standard_task_runner.py:85} INFO - Job 1649: Subtask first_task
+[2023-06-11T10:27:23.337+0000] {task_command.py:410} INFO - Running <TaskInstance: BashOperator_dag.first_task scheduled__2023-05-23T00:00:00+00:00 [running]> on host 93a4f35889be
+[2023-06-11T10:29:07.300+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 1649 for task first_task ((psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8); 52985)
+[2023-06-11T10:29:08.796+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2023-06-11T10:29:10.438+0000] {taskinstance.py:2651} INFO - 0 downstream tasks scheduled from follow-on schedule check
